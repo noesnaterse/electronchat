@@ -1,11 +1,19 @@
 import React from 'react';
-import { Link, HashRouter as Router } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function Navbar() {
+    const history = useHistory();
+
     return (
         <div className="chat-navbar">
             <nav className="chat-navbar-inner">
                 <div className="chat-navbar-inner-left">
+                    <button
+                        className="btn btn-outline-primary"
+                        onClick={() => history.goBack()}
+                    >
+                        Back
+                    </button>
                     <Link to="/settings" className="btn btn-outline-success ml-2">Settings</Link>
                 </div>
                 <div className="chat-navbar-inner-right">
@@ -13,12 +21,11 @@ export default function Navbar() {
                     <Link
                         to="/register"
                         onClick={() => {}}
-                        className="btn btn-sm btn-outline-danger ml-2">Register</Link>
+                        className="btn btn-outline-danger ml-2">Register</Link>
                     <Link
                         to="/login"
                         onClick={() => {}}
-                        className="btn btn-sm btn-outline-success ml-2">Login</Link>
-
+                        className="btn btn-outline-success ml-2">Login</Link>
                 </div>
             </nav>
         </div>
