@@ -4,6 +4,6 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 
-import Home from './views/Home';
+import App from './App';
 
-ReactDOM.render(<Home />, document.getElementById('chatApp'));
+ReactDOM.render(<App />, document.getElementById('chatApp'));
