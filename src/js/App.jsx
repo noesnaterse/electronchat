@@ -1,6 +1,7 @@
 import React from 'react';
 
 import HomeView from './views/Home';
+import ChatView from './views/Chat';
 import RegisterView from './views/Register';
 import LoginView from './views/Login';
 import SettingsView from './views/Settings';
@@ -18,6 +19,7 @@ export default function App() {
             <Navbar />
             <div className="content-wrapper">
                 <Switch>
+                    <Route path="/chat"><ChatView /></Route>
                     <Route path="/settings"><SettingsView /></Route>
                     <Route path="/login"><LoginView /></Route>
                     <Route path="/register"><RegisterView /></Route>
