@@ -19,7 +19,7 @@ export default function App() {
             <Navbar />
             <div className="content-wrapper">
                 <Switch>
-                    <Route path="/chat"><ChatView /></Route>
+                    <Route path="/chat/:id"><ChatView /></Route>
                     <Route path="/settings"><SettingsView /></Route>
                     <Route path="/login"><LoginView /></Route>
                     <Route path="/register"><RegisterView /></Route>
